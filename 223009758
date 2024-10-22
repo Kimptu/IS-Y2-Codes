@@ -1,0 +1,230 @@
+Question 1
+
+import java.util.Scanner; 
+public class Paritycheck { 
+public static void main(String[] args) { 
+Scanner p = new Scanner(System.in); 
+System.out.println("Enter a number: "); 
+int num = p.nextInt(); 
+if (num % 2 == 0) { 
+System.out.println(num + " is even"); } 
+else { 
+System.out.println(num + " is odd"); 
+}
+ }
+ }
+Question 2
+
+import java.util.Scanner;
+public class Grading{
+    public static void main(String[] args) {
+        Scanner g = new Scanner(System.in);
+        System.out.println("Enter your grade (A, B, C, D, F): ");
+        char grade = g.next().charAt(0);
+
+        switch (grade) {
+            case 'A':
+                System.out.println("Excellent");
+                break;
+            case 'B':
+                System.out.println("Very good");
+                break;
+            case 'C':
+                System.out.println("Good");
+                break;
+            case 'D':
+                System.out.println("You passed");
+                break;
+            case 'F':
+                System.out.println("Failed");
+                break;
+            default:
+                System.out.println("Invalid grade entered.");
+                break;
+        }
+    }
+}
+Question 3
+
+import java.util.Scanner;
+public class Leapyear {
+    public static void main(String[] args) {
+        Scanner l = new Scanner(System.in);
+
+        System.out.println("Enter a year: ");
+        int year = l.nextInt();
+
+        if (year % 4 == 0) {
+            System.out.println(year + " is a leap year.");
+        } else {
+            System.out.println(year + " is not a leap year.");
+        }
+    }
+}
+Question 4
+
+import java.util.Scanner;
+public class Largestnumber{
+    public static void main(String[] args) {
+        Scanner L = new Scanner(System.in);
+
+        System.out.println("Enter 3 numbers: ");
+        int a = L.nextInt();
+        int b = L.nextInt();
+        int c = L.nextInt();
+        if (a>b && a>c) {
+            System.out.println("The largest number is"+  a);
+        }
+      else if (b>a && b>c)
+        {
+            System.out.println("The largest number is"+  b);
+        }
+        else{
+            System.out.println("The largest number is"+  c);   
+        }
+    }
+}
+Question 5
+
+ import java.util.Scanner;
+public class Numbers{
+    public static void main(String[] args) {
+        Scanner n = new Scanner(System.in);
+
+        System.out.println("Enter a number: ");
+        double nbr = n.nextDouble();
+
+        if (nbr > 0) {
+            System.out.println(nbr + " is positive");
+        }
+        else if (nbr < 0) {
+            System.out.println(nbr + " is negative");
+        } 
+        else {
+            System.out.println("The number is zero");
+        }
+    }
+}
+Question 6
+
+public class TrianglePattern {
+    public static void main(String[] args) {
+        int num = 7;
+        for (int i = 1; i <= num; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j+" ");
+            }
+            System.out.println();
+        }
+    }
+}
+Question 7
+
+import java.util.Scanner;
+public class DiamondPattern
+{
+public static void main(String args[])
+{
+int row,i,j,space=1;
+System.out.print("Enter the number of rows you want to print:");
+Scanner sc=new Scanner(System.in);
+row=sc.nextInt();
+space=row-1;
+for(j=1;j<=row;j++)
+{
+for(i=1;i<=space;i++)
+{
+System.out.print("");
+}
+space--;
+for(i=1;i<=2*j-1;i++)
+{
+System.out.print("*");
+}
+System.out.println("");
+}
+space=1;
+for(j=1;j<=row-1;j++)
+{
+for(i=1;i<=space;i++)
+{
+System.out.print("");
+}
+space++;
+for(i=1;i<=2*(row-j)-1;i++)
+{
+System.out.print("*");
+}
+System.out.println("");
+}
+}
+}
+Question 8
+
+public class Average {
+    public static void main(String[] args) {
+        int[] array = {10, 12, 34, 23, 56, 78};
+        int sum = 0;
+        for (int num : array) {
+            sum = sum+num;
+        }
+        double average = (double) sum / array.length;
+        System.out.println("The average of the array elements is: " + average);
+    }
+}
+Question 9
+
+public class Reversal {
+     public static void reverseArray(int[] array) {
+        int left = 0;
+        int right = array.length - 1;
+
+        while (left < right) {
+            int temp = array[left];
+            array[left] = array[right];
+            array[right] = temp;
+            left++;
+            right--;
+        }
+    }
+    public static void printArray(int[] array) {
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+    public static void main(String[] args) {
+        int[] array = {3, 4, 6, 1, 9, 7, 5, 8};
+        System.out.println("Original array:");
+        printArray(array);
+        reverseArray(array);
+        System.out.println("Reversed array:");
+        printArray(array);
+    }
+    
+}
+Question 10
+
+public class LargestElementFinder {
+    public static void main(String[] args) {
+        int[] array = {34, 23, 12, 45, 67, 89, 234, 26, 10, 30, 43};
+        int largest = findLargestElement(array);
+        System.out.println("The largest element in the array is: " + largest);
+    }
+    public static int findLargestElement(int[] array) {
+        int largest = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > largest) {
+                largest = array[i];
+            }
+        }
+        
+        return largest;
+    }
+}
+
+
+
+
+
+
