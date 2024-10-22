@@ -1,0 +1,239 @@
+1)import java.util.Scanner;
+
+public class EvenOddChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        if (number % 2 == 0) {
+            System.out.println(number + " is even.");
+        } else {
+            System.out.println(number + " is odd.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+2) import java.util.Scanner;
+
+public class GradeMessage {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your grade (A, B, C, D, F): ");
+        char grade = scanner.next().charAt(0);
+
+        switch (grade) {
+            case 'A':
+                System.out.println("Excellent!");
+                break;
+            case 'B':
+                System.out.println("Well done!");
+                break;
+            case 'C':
+                System.out.println("Good job!");
+                break;
+            case 'D':
+                System.out.println("You passed.");
+                break;
+            case 'F':
+                System.out.println("Better luck next time.");
+                break;
+            default:
+                System.out.println("Invalid grade entered.");
+                break;
+        }
+
+        scanner.close();
+    }
+}
+
+
+3) import java.util.Scanner;
+
+public class LeapYearChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a year: ");
+        int year = scanner.nextInt();
+
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            System.out.println(year + " is a leap year.");
+        } else {
+            System.out.println(year + " is not a leap year.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+4) import java.util.Scanner;
+
+public class LargestNumberFinder {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the first number: ");
+        int num1 = scanner.nextInt();
+
+        System.out.print("Enter the second number: ");
+        int num2 = scanner.nextInt();
+
+        System.out.print("Enter the third number: ");
+        int num3 = scanner.nextInt();
+
+        if (num1 >= num2 && num1 >= num3) {
+            System.out.println(num1 + " is the largest number.");
+        } else if (num2 >= num1 && num2 >= num3) {
+            System.out.println(num2 + " is the largest number.");
+        } else {
+            System.out.println(num3 + " is the largest number.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+5)import java.util.Scanner;
+
+public class NumberChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        double number = scanner.nextDouble();
+
+        if (number > 0) {
+            System.out.println(number + " is positive.");
+        } else if (number < 0) {
+            System.out.println(number + " is negative.");
+        } else {
+            System.out.println("The number is zero.");
+        }
+
+        scanner.close();
+    }
+}
+
+6) public class TrianglePattern {
+    public static void main(String[] args) {
+        int rows = 7;
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+7)import java.util.Scanner;
+
+public class DiamondShape {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter the number of rows for the diamond shape: ");
+        int rows = scanner.nextInt();
+
+        
+        for (int i = 1; i <= rows; i++) {
+            
+            for (int j = i; j < rows; j++) {
+                System.out.print(" ");
+            }
+            
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+    
+        for (int i = rows - 1; i >= 1; i--) {
+            
+            for (int j = rows; j > i; j--) {
+                System.out.print(" ");
+            }
+        
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
+
+
+8)public class AverageCalculator {
+    public static void main(String[] args) {
+    
+        int[] numbers = {10, 12, 34, 23, 56, 78};
+        
+        
+        int sum = 0;
+        for (int number : numbers) {
+            sum += number;
+        }
+
+        
+        double average = (double) sum / numbers.length;
+
+      
+        System.out.println("The average of the array elements is: " + average);
+    }
+}
+
+
+9)public class ArrayReversal {
+    public static void main(String[] args) {
+        
+        int[] numbers = {3, 4, 6, 1, 9, 7, 5, 8};
+        
+        
+        int length = numbers.length;
+        
+        
+        int[] reversed = new int[length];
+
+        for (int i = 0; i < length; i++) {
+            reversed[i] = numbers[length - 1 - i];
+        }
+
+        
+        System.out.print("Reversed array: ");
+        for (int num : reversed) {
+            System.out.print(num + " ");
+        }
+    }
+}
+
+
+10)public class LargestElement {
+    public static void main(String[] args) {
+        int[] array = {34, 23, 12, 45, 67, 89, 234, 26, 10, 30, 43};
+        
+        int largest = findLargest(array);
+        System.out.println("The largest element in the array is: " + largest);
+    }
+
+    public static int findLargest(int[] arr) {
+        int largest = arr[0]; // Assume the first element is the largest
+        for (int num : arr) {
+            if (num > largest) {
+                largest = num;
+            }
+        }
+        return largest;
+    }
+}
