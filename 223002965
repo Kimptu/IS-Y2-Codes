@@ -1,0 +1,202 @@
+Qn1. public class EvenOdd {
+import java.util.Scanner;
+    public static void main(String[] args) {
+
+        Scanner reader = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int x = reader.nextInt();
+
+        if(x % 2 == 0)
+            System.out.println(x + " is even");
+        else
+            System.out.println(x + " is odd");
+    }
+}
+Qn2. public class Grade{
+import java.util.Scanner;
+public static void main(String[] args){
+    {
+        char Grade = 'A';
+        switch (Grade)
+        {
+            case 'A':
+                System.out.println("Excellent");
+                break;
+            case 'B':
+                System.out.println("Very Good");
+                break;
+            case 'C':
+                System.out.println("Good");
+                break;
+            case 'D':
+                System.out.println("Fair");
+                break;
+            case 'F':
+                System.out.println("Fail");
+                break;
+        }
+    }
+Qn3.public class LeapYear {
+import java.util.scanner;
+   public static void main(String[] args){
+      int year;
+      System.out.println("Enter an Year :: ");
+      Scanner sc = new Scanner(System.in);
+      year = sc.nextInt();
+
+      if (((year % 4 == 0) && (year % 100!= 0)) || (year%400 == 0))
+         System.out.println("Specified year is a leap year");
+      else
+         System.out.println("Specified year is not a leap year");
+   }
+}
+
+Qn4. public class LargestNum  
+{
+import java.util.scanner;
+public static void main(String[] args)   
+{  
+int x, y, z, largest;
+Scanner sc = new Scanner(System.in);  
+
+System.out.println("Enter the first number:");  
+x = sc.nextInt();  
+System.out.println("Enter the second number:");  
+y = sc.nextInt();  
+System.out.println("Enter the third number:");  
+z = sc.nextInt();  
+if( x >= y && x >= z)
+            System.out.println(x + " is the largest number.");
+
+        else if (y >= x && y >= z)
+            System.out.println(y + " is the largest number.");
+
+        else
+            System.out.println(z + " is the largest number.");
+    }
+}
+Qn5.public class Exercise {
+import java.util.Scanner;
+ public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Input a number: ");
+        int a = in.nextInt();
+
+        if (a > 0)
+        {
+            System.out.println("Number is positive");
+        }
+        else if (a < 0)
+        {
+            System.out.println("Number is negative");
+        }
+        else
+        {
+            System.out.println("Number is zero");
+        }
+    }
+}
+Qn6. public class Triangle {
+import java.util.Scanner;
+    public static void main(String[] args) {
+        int rows = 7; 
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(i + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+Qn7.
+
+public class DiamondPattern {
+import java.util.Scanner;
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number of rows for the diamond: ");
+        int rows = scanner.nextInt(); 
+
+        
+        for (int i = 1; i <= rows; i++) {
+           
+            for (int j = i; j < rows; j++) {
+                System.out.print(" ");
+            }
+            
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                System.out.print("*");
+            }
+            
+            System.out.println();
+        }
+
+       
+        for (int i = rows - 1; i >= 1; i--) {
+          
+            for (int j = rows; j > i; j--) {
+                System.out.print(" ");
+            }
+           
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                System.out.print("*");
+            }
+          
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
+
+Qn8.public class Average {
+import java.util.scanner;
+    public static void main(String[] args) {
+import java.util.scanner;
+        int []Array = { 10,12,34,23,56,78 };
+        int sum = 0;
+
+        for (int n: Array) {
+           sum += n;
+        }
+
+        double average = sum / Array.length;
+        System.out.printf("The average is: %.2f", average);
+    }
+}
+Qn9. public class ReverseArray { 
+import  java.util.Scanner;
+    public static void main(String[] args) { 
+        int [] array = new int [] {3,4,6,1,9,7,5,8};  
+        System.out.println("Original array: ");  
+        for (int i = 0; i < array.length; i++) {  
+            System.out.print(array[i] + " ");  
+        }  
+        System.out.println();  
+        System.out.println("Array in reverse order: ");    
+        for (int i = array.length-1; i >= 0; i--) {  
+            System.out.print(array[i] + " ");  
+        }  
+    }  
+Qn10.public class LargestElement { 
+import java.util.Scanner;
+    public static void main(String[] args) {  
+  
+      
+        int [] arr = new int [] {34,23,12,45,67,89,234,26,10,30,43};  
+        
+        int largest = arr[0];  
+   
+        for (int i = 0; i < arr.length; i++) {  
+           
+           if(arr[i] >largest)  
+               largest= arr[i];  
+        }  
+        System.out.println("Largest element present in given array: " +largest);  
+    }  
+}  
+  
+ 
