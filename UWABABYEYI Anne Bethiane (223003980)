@@ -1,0 +1,354 @@
+/**
+ *
+ * @author Bethiane
+ */
+
+
+/* 1) A Java program to check whether a given number is odd or even.*/
+
+package com.mycompany.bethiane.assignment;
+
+import java.util.Scanner;
+
+public class QuestionOne {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int number = scanner.nextInt();
+
+        if (number % 2 == 0) {
+            System.out.println(" The number " + number + " is even.");
+        } else {
+            System.out.println(" The number " + number + " is odd.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+
+/* 2) A Java program to determine grades based on user input scores and provide a message accordingly.*/
+
+package com.mycompany.bethiane.assignment;
+
+import java.util.Scanner;
+
+public class QuestionTwo {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your grade (A, B, C, D, or F): ");
+        String grade = scanner.next().toUpperCase();
+
+        switch (grade) {
+            case "A":
+                System.out.println("Excellent! Keep up the great work!");
+                break;
+            case "B":
+                System.out.println("Good job! You're doing well.");
+                break;
+            case "C":
+                System.out.println("Sufficient. There's room for improvement.");
+                break;
+            case "D":
+                System.out.println("You need to work harder. Seek help if needed.");
+                break;
+            case "F":
+                System.out.println("Failed. Please consult with your lecture.");
+                break;
+            default:
+                System.out.println("Invalid grade entered. Please enter A, B, C, D, or F.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+/* 3) A Java program to check if a given year is a leap year.*/
+
+package com.mycompany.bethiane.assignment;
+
+import java.util.Scanner;
+
+public class QuestionThree {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a year: ");
+        int year = scanner.nextInt();
+
+        boolean isLeapYear = false;
+
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    isLeapYear = true;
+                }
+            } else {
+                isLeapYear = true;
+            }
+        }
+
+        if (isLeapYear) {
+            System.out.println(year + " is a leap year.");
+        } else {
+            System.out.println(year + " is not a leap year.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+/* 4) A Java program to identify the largest number from a set of user input*/
+
+package com.mycompany.bethiane.assignment;
+
+import java.util.Scanner;
+
+public class QuestionFour {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter three numbers:");
+
+        System.out.print("First number: ");
+        double num1 = scanner.nextDouble();
+
+        System.out.print("Second number: ");
+        double num2 = scanner.nextDouble();
+
+        System.out.print("Third number: ");
+        double num3 = scanner.nextDouble();
+
+        if (num1 >= num2 && num1 >= num3) {
+            System.out.println("The largest number is: " + num1);
+        } else if (num2 >= num1 && num2 >= num3) {
+            System.out.println("The largest number is: " + num2);
+        } else {
+            System.out.println("The largest number is: " + num3);
+        }
+
+        scanner.close();
+    }
+}
+
+
+/* 5) A Java program to determine if a number is positive, negative, or zero*/
+
+package com.mycompany.bethiane.assignment;
+
+import java.util.Scanner;
+
+public class QuestionFive {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        double number = scanner.nextDouble();
+
+        if (number > 0) {
+            System.out.println("The number is positive.");
+        } else if (number < 0) {
+            System.out.println("The number is negative.");
+        } else {
+            System.out.println("The number is zero.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+/* 6) A Java program to generate triangular patterns using numbers.*/
+
+package com.mycompany.bethiane.assignment;
+
+public class QuestionSix {
+
+    public static void main(String[] args) {
+        int rows = 7;
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+/* 7) A Java program to print diamond-shaped patterns using asterisks.*/
+
+package com.mycompany.bethiane.assignment;
+
+import java.util.Scanner;
+
+public class QuestionSeven {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the number of rows (odd number): ");
+        int n = scanner.nextInt();
+
+        if (n % 2 == 0) {
+            n++;
+        }
+
+        int spaces = n / 2;
+        int stars = 1;
+
+        // upper
+        for (int i = 1; i <= n / 2 + 1; i++) {
+            // spaces
+            for (int j = 1; j <= spaces; j++) {
+                System.out.print(" ");
+            }
+
+            // stars
+            for (int j = 1; j <= stars; j++) {
+                System.out.print("*");
+            }
+
+            System.out.println(); // next line
+            spaces--;
+            stars += 2;
+        }
+
+        // lower 
+        spaces = 1;
+        stars = n - 2;
+
+        for (int i = 1; i <= n / 2; i++) {
+            // spaces
+            for (int j = 1; j <= spaces; j++) {
+                System.out.print(" ");
+            }
+
+            // stars
+            for (int j = 1; j <= stars; j++) {
+                System.out.print("*");
+            }
+
+            System.out.println(); // next line
+            spaces++;
+            stars -= 2;
+        }
+
+        scanner.close();
+    }
+}
+
+
+/* 8) A Java program to calculate the average of a given array of numbers.*/
+
+package com.mycompany.bethiane.assignment;
+
+public class QuestionEight {
+
+    public static void main(String[] args) {
+
+        int[] numbers = {10, 12, 34, 23, 56, 78};
+
+        int sum = 0;
+
+        for (int number : numbers) {
+            sum = sum + number;
+        }
+
+        double average = (double) sum / numbers.length;
+
+        System.out.println("Elements in array are:");
+        for (int number : numbers) {
+            System.out.print(number + " ");
+        }
+
+        System.out.println("\nThe average of the elements in array is: " + average);
+    }
+}
+
+
+/* 9) A Java program to reverse the elements of an array.*/
+
+package com.mycompany.bethiane.assignment;
+
+public class QuestionNine {
+
+    public static void main(String[] args) {
+
+        int[] originalArray = {3, 4, 6, 1, 9, 7, 5, 8};
+
+        System.out.println("Original Array:");
+        printArray(originalArray);
+
+        reverseArray(originalArray);
+
+        System.out.println("\nReversed Array:");
+        printArray(originalArray);
+    }
+
+    // method
+    public static void reverseArray(int[] arr) {
+        int start = 0;
+        int end = arr.length - 1;
+
+        while (start < end) {
+            // swapping elements
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+
+            start++;
+            end--;
+        }
+    }
+
+    // print the array(method too)
+    public static void printArray(int[] arr) {
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+}
+
+
+/* 10) A Java program to find the largest element in an array.*/
+
+package com.mycompany.bethiane.assignment;
+
+public class QuestionTen {
+
+    public static void main(String[] args) {
+
+        int[] numbers = {34, 23, 12, 45, 67, 89, 234, 26, 10, 30, 43};
+
+        int largest = numbers[0];
+
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] > largest) {
+                largest = numbers[i];
+            }
+        }
+
+        System.out.println("The array elements are:");
+        for (int number : numbers) {
+            System.out.print(number + " ");
+        }
+
+        System.out.println("\nThe largest element in the array is: " + largest);
+    }
+}
+
+
+/* END */
